@@ -1,11 +1,14 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import solidPlugin from 'vite-plugin-solid'
+
 export default defineConfig(() => {
   return {
     plugins: [
       Unocss(),
+      solidPlugin(),
       AutoImport({
         /* options */
         include: [
@@ -13,7 +16,7 @@ export default defineConfig(() => {
         ],
         imports: [],
         dirs: ['src/utils'],
-        dts: 'src/typings/auto-import.d.ts',
+        dts: 'typings/auto-import.d.ts',
 
       }),
     ],

@@ -11,6 +11,7 @@
     "strict": true, // 开启所有严格的类型检查
     "esModuleInterop": true, // 允许export=导出，由import from 导入
     "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "skipLibCheck": true, //忽略所有的声明文件（ *.d.ts ）的类型检查
     "moduleResolution": "node", // 模块解析策略，ts默认用node的解析策略，即相对的方式导入
     "resolveJsonModule": true, //解析json文件
@@ -29,7 +30,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts"
-  ],
+, "src/main.tsx"  ],
   "exclude": [
     "node_modules",
     "dist"
